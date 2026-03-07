@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- PWA -->
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Tempo" />
+    <meta name="theme-color" content="#2D4A3E" />
+
+    <!-- SEO: real search terms victims use -->
+    <title>Ajuda Lisboa – Apoio a Vítimas de Violência Doméstica</title>
+    <meta name="description" content="Ajuda imediata para vítimas de violência doméstica em Lisboa. Casas de abrigo, linhas de apoio, recursos gratuitos 24h. Help for domestic violence victims in Lisbon, Portugal." />
+    <meta name="keywords" content="violência doméstica lisboa, casa de abrigo lisboa, ajuda mulheres lisboa, APAV, AMCV, 800 202 148, apoio vítimas lisboa, domestic violence lisbon, shelter lisbon women" />
+
+    <!-- Open Graph (for sharing via WhatsApp, social) -->
+    <meta property="og:title" content="Porto Seguro Lisboa – Ajuda Agora" />
+    <meta property="og:description" content="Apoio imediato a vítimas de violência doméstica em Lisboa. Gratuito, confidencial, 24 horas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+
+    <!-- Prevent caching of the shell so updates deploy instantly -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+    <style>
+      /* Critical CSS: visible even before JS loads */
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #F7F3EE; font-family: Georgia, serif; }
+
+      /* No-JS fallback: if React fails, show emergency numbers */
+      #emergency-fallback {
+        display: none;
+        padding: 24px 20px;
+        text-align: center;
+        max-width: 430px;
+        margin: 0 auto;
+      }
+      #emergency-fallback h1 { color: #2D4A3E; font-size: 22px; margin-bottom: 16px; }
+      #emergency-fallback .number {
+        display: block; background: #2D4A3E; color: white;
+        padding: 16px; margin: 10px 0; border-radius: 10px;
+        font-size: 20px; font-weight: bold; text-decoration: none;
+      }
+      #emergency-fallback .number.red { background: #8B2635; }
+      noscript #emergency-fallback { display: block; }
+    </style>
+  </head>
+  <body>
+    <!-- No-JS emergency fallback — works even if JavaScript is blocked -->
+    <noscript>
+      <div id="emergency-fallback">
+        <h1>🌿 Porto Seguro</h1>
+        <p style="color:#5A5147;margin-bottom:20px;font-size:15px;">
+          Está em segurança aqui. Ajuda disponível agora.
+        </p>
+        <a href="tel:112" class="number red">🆘 Emergência: 112</a>
+        <a href="tel:800202148" class="number">📞 Linha Verde VD: 800 202 148</a>
+        <a href="tel:144" class="number">📞 Emergência Social: 144</a>
+        <a href="tel:116006" class="number">📞 APAV: 116 006</a>
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
