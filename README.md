@@ -1,5 +1,5 @@
 # Porto Seguro Lisboa 🌿
-### Emergency shelter & support app for domestic violence victims in Lisbon, Portugal
+### Emergency shelter & support app for domestic violence victims in Portugal
 **PWA · Works offline · Bilingual PT/EN · Disguised as a weather app on home screen**
 
 ---
